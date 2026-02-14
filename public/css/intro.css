@@ -1,0 +1,162 @@
+/* INTRO */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: radial-gradient(circle at top, #140028, #020214);
+  animation: bgFlow 12s infinite alternate;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+@keyframes bgFlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* INTRO */
+
+.intro {
+  text-align: center;
+  z-index: 10;
+  animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.subtitle {
+  margin-top: 15px;
+  letter-spacing: 6px;
+  color: #ff2fd6;
+}
+
+/* GLITCH */
+
+.glitch {
+  font-size: 6rem;
+  position: relative;
+  color: #00ffff;
+  text-shadow: 0 0 15px #00ffff;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 magenta;
+  animation: glitch1 2s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: -2px 0 cyan;
+  animation: glitch2 1.5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch1 {
+  0% { clip-path: inset(80% 0 0 0); }
+  100% { clip-path: inset(0 0 80% 0); }
+}
+
+@keyframes glitch2 {
+  0% { clip-path: inset(0 0 90% 0); }
+  100% { clip-path: inset(90% 0 0 0); }
+}
+
+/* ENTER BUTTON */
+
+.enter-btn {
+  margin-top: 50px;
+  padding: 14px 60px;
+  border-radius: 50px;
+  background: transparent;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  letter-spacing: 4px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.enter-btn:hover {
+  background: #00ffff;
+  color: black;
+  box-shadow: 0 0 30px #00ffff;
+}
+
+/* GRID */
+
+.grid {
+  position: fixed;
+  bottom: -10%;
+  width: 100%;
+  height: 45%;
+  background:
+    linear-gradient(transparent 90%, rgba(0,255,255,0.2)),
+    linear-gradient(90deg, transparent 90%, rgba(0,255,255,0.2));
+  background-size: 40px 40px;
+  transform: perspective(600px) rotateX(65deg);
+  animation: gridMove 4s linear infinite;
+  opacity: 0.35;
+}
+
+@keyframes gridMove {
+  from { background-position: 0 0; }
+  to { background-position: 0 40px; }
+}
+
+/* SCANLINES */
+
+.scanlines {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.03),
+    rgba(255,255,255,0.03) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  z-index: 5;
+}
+
+/* PARTICLES */
+
+#particles {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+}
+
+/* CINEMATIC TRANSITION */
+
+.fade-out {
+  animation: exit 1s forwards;
+}
+
+@keyframes exit {
+  to {
+    opacity: 0;
+    transform: scale(1.4);
+    filter: blur(12px);
+  }
+}

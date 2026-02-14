@@ -1,0 +1,178 @@
+body {
+  background: #050508;
+  color: #eaeaff;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(180deg, rgba(5,5,8,0.5), rgba(5,5,8,0.9)),
+    url('/assets/img/anime-cyberpunk-scifi-city-ow.jpg') center / cover no-repeat;
+}
+
+.neon-title {
+  font-size: 3.5rem;
+  color: #9efcff;
+  text-shadow:
+    0 0 10px #00f6ff,
+    0 0 20px #8a2cff;
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+  opacity: 0.9;
+}
+
+/* BOTÓN */
+
+.btn-cta {
+  background: linear-gradient(90deg, #00f6ff, #ff2cdf);
+  border: none;
+  color: #050508;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 246, 255, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-cta:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 0 30px rgba(255, 44, 223, 0.6);
+}
+
+/* CARDS */
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.section-title {
+  font-size: 2.4rem;
+  color: #9efcff;
+  text-shadow: 0 0 8px #00f6ff;
+}
+
+/* PREVIEW */
+
+.preview-img {
+  border-radius: 16px;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.preview-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(0, 246, 255, 0.4);
+}
+
+/* PRODUCT */
+
+.product-card {
+  background: linear-gradient(135deg, rgba(0,246,255,.08), rgba(138,44,255,.08));
+  border-radius: 18px;
+  padding: 28px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,.08);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.product-card .btn {
+  margin-top: auto;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #00f6ff;
+}
+
+/* FINAL CTA */
+
+.final-cta {
+  padding: 100px 20px;
+  background: radial-gradient(circle at top, rgba(0,246,255,.15), transparent 60%);
+}
+
+
+
+.about-section {
+  min-height: 100vh;
+  padding: 80px 10%;
+  background: radial-gradient(circle at top, #070015, #020214);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.glass-card {
+  background: rgba(10, 0, 30, 0.65);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 16px;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px rgba(0,255,255,0.15);
+  transition: all 0.4s ease;
+}
+
+.glass-card:hover {
+  box-shadow: 0 0 40px rgba(255,0,255,0.5);
+  transform: scale(1.01);
+}
+
+.neon-text {
+  font-size: 4rem;
+  color: #00ffff;
+  text-shadow:
+    0 0 10px #00ffff,
+    0 0 25px #ff2fd6,
+    0 0 45px #ff2fd6;
+}
+
+.subtitle {
+  letter-spacing: 4px;
+  color: #ff2fd6;
+  text-transform: uppercase;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  padding: 30px;
+  background: rgba(0,0,0,0.5);
+  border: 1px solid #ff2fd6;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.4s;
+}
+
+.project-card:hover {
+  box-shadow: 0 0 20px #ff2fd6;
+  transform: translateY(-6px);
+}
+
+.instagram-embed {
+  width: 100%;
+  height: 520px;
+  border-radius: 12px;
+}
+
+
+
+
